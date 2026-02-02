@@ -3,7 +3,7 @@ bin/
 # Vim's temp files
 *.swp
 # MacOS .DS_Store file
-.DS_Dtore
+.DS_Store
 # Local scripts for the repo updates
 gitupdate.sh
 # Object and executable files
