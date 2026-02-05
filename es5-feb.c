@@ -16,6 +16,7 @@ int main(void) {
     xpow4 = x * xpow3;
     xpow5 = x * xpow4;
 
+    
     result = 3 * xpow5 + 2 * xpow4 - 5 * xpow3 - xpow2 + 7 * x - 6;
     horner = ((((3 * x + 2) * x - 5) * x - 1) * x + 7) * x - 6;
     
