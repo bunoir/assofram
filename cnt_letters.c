@@ -22,6 +22,10 @@ int main(int argc, char *argv[]) {
     for(i = 0; i < 26; ++i) letters[i] = 0;
 
     while ((c = getc(ifp)) != EOF)
+        /* BONUS
+            1. Controlla se il carattere letto è unaa lettera letta è minuscola
+            2. Nel caso, transformala in maiuscola
+        */
         if ((c >= 'A') && (c <= 'Z'))
             ++letters[c - 'A'];
 
