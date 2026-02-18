@@ -61,8 +61,19 @@ int is_alpha(char str[]) {
     return check;
 }
 
-void sanitize(char str[]){
+void sanitize(char str[]) {
+    int i = 0, idx = -1;
 
+    while(str[i] != '\0') {
+        if(!is_alphachar(str[i]))
+            idx = i;
+        else if(idx > 0) {
+            str[idx] = str[i];
+            idx = i;
+        }
+        i++;
+    }
+    if(idx >= 0) str[idx] = '\0';
 }
 
 int main(void) {
@@ -71,10 +82,7 @@ int main(void) {
     printf("Inserisci una stringa alfabetica: ");
     scanf("%s", mystr);
     
-    if (!is_alpha(mystr)) {
-        printf("La stringa deve essere alfabetica (a-z oppure A-Z)\n");
-        return 1;
-    }
+    sanitize(mystr);
 
     to_lower(mystr);
     printf("Trasformazione in minuscolo: %s\n", mystr);
