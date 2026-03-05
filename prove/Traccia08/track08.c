@@ -1,14 +1,18 @@
 /**
- * Traccia #8
- *
+ * Traccia #8 - Inizializzazion random di un array
+ * 
+ * Il candidato scriva un programma che inizializzi con valori casuali due
+ * array di interi di dimensione 10. Il primo con valori nell'intervallo
+ * [1, 10], l'altro con valori nell'intervallo [11, 20].
+ * Il programma mostri a video, formattando opportunamente, il risultato delle inizializzazioni.
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 int main(void) {
-    int a[10], b[10];
-    int i;
+    int a[10], b[10];       /* Array da inizializzare   */
+    int i;                  /* Contatore/Indice cicli   */
 
     /* Inizializzazione del generatore di numeri casuali */
     srand(time(NULL));
